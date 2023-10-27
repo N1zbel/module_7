@@ -7,7 +7,7 @@ from course.views import LessonListAPIView, LessonCreateAPIView, LessonDestroyAP
 app_name = 'course'
 
 router = DefaultRouter()
-router.register('course', CourseViewSet)
+router.register(r'course', CourseViewSet)
 urlpatterns = [
     path('lesson/', LessonListAPIView.as_view(), name='lesson-list'),
     path('lesson/create', LessonCreateAPIView.as_view(), name='lesson-create'),
